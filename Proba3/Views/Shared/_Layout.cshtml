@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Proba2.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="header">
+        <div class="row">
+            <div class="brand" id="mybrand">
+                <a id="brand" class="navbar-brand" asp-controller="Home" asp-action="Index">INVENTORY</a>
+            </div>
+            <div class="navbar" id="main_nav">
+                <div class="mainmenu">
+                    <div class="dropdown">
+                        <a id="equip" asp-controller="Equipments" asp-action="Index">ОБОРУДОВАНИЕ</a>
+                    </div>
+                    <div class="dropdown">
+                        <a id="database" href="">БАЗА ДАННЫХ</a>
+                        <div id="submenu1" class="submenu">
+                            <a id="create_DB" href="">СОЗДАТЬ</a>
+                            <a id="delete_DB" href="">УДАЛИТЬ</a>
+                            <a id="import" href="">ИМПОРТ</a>
+                            <a id="export" href="">ЭКСПОРТ</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a id="reports" href="">ОТЧЕТЫ</a>
+                        <div id="submenu2" class="submenu">
+                            <a href="">1</a>
+                            <a href="">2</a>
+                            <a href="">3</a>
+                        </div>
+
+                    </div>
+                    <div class="dropdown">
+                        <a id="system" href="">СИСТЕМА</a>
+                        <div id="submenu3" class="submenu">
+                            <a id="manufacturer" asp-controller="Manufacturers" asp-action="Index">ПРОИЗВОДИТЕЛИ</a>
+                            <a id="unit" href="">ПОДРАЗДЕЛЕНИЯ</a>
+                            <a id="users" href="">ПОЛЬЗОВАТЕЛИ</a>
+                            <a id="category" href="">КАТЕГОРИИ</a>
+                            <a id="subunit" href="">КАБИНЕТЫ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown" id="enter">
+                <a id="author" href="">АВТОРИЗАЦИЯ</a>
+                <div class="submenu" id="submenu5">
+                    <form action="" class="siteform" id="enter_form" method="post">
+                        <input type="text" id="login" name="login" minlength="3" maxlength="25" placeholder="Введите логин" required>
+                        <input type="password" id="password" name="password" minlength="8" maxlength="25" placeholder="Введите пароль" required>
+                        <button id="auth_but" type="submit">Войти</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <div class="row" id="reklama">
+        <div class="side_img"><img src="/img/service.jpg" alt=""> </div>
+        <div class="slider">
+            <!-- <h1>Слайдер</h1> -->
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="/img/board.jpg" alt="Плата">
+                    <img src="/img/board2.jpg" alt="Плата">
+                    <img src="/img/board3.jpg" alt="Плата">
+                </div>
+                <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+                <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>
+            </div>
+        </div>
+        <div class="side_img"><img src="/img/service.jpg" alt=""></div>
+    </div>
+    <main>
+        @RenderBody()
+        <div class="row" id="status"></div>
+    </main>
+
+    <footer class="footer" id="pageFooter">
+        <p class="lable">Copyright by Semenko Igor</p>
+    </footer>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/slider.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

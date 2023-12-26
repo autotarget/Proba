@@ -1,0 +1,53 @@
+﻿
+@model IEnumerable<Proba3.Models.Manufacturer>
+
+@{
+    ViewData["Title"] = "Производитель";
+}
+
+<div class="row" id="mainsection">
+    <div id="sidebar" class="container"></div>
+    <div id="mainbar" class="container">
+        <table class="table">
+            <thead>
+                <tr>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td class="row">
+                            <button><a asp-action="Edit" asp-route-id="@item.Id">Изменить</a></button>
+                            <button><a asp-action="Details" asp-route-id="@item.Id">Подробности</a> </button>
+                            <button> <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a></button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <p>
+            <button>@Html.ActionLink("Добавить", "Create")</button>
+        </p>
+    </div>
+</div>

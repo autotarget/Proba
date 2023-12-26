@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Proba3.Models.Equipment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="row" id="mainsection">
+    <div id="sidebar" class="container"></div>
+    <div id="mainbar" class="container">
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                        @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                        @Html.DisplayNameFor(model => model.Model)
+            </th>
+         
+            <th>
+                        @Html.DisplayNameFor(model => model.Ser_num)
+            </th>
+            <th>
+                        @Html.DisplayNameFor(model => model.Inv_num)
+            </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ManufacturerId)
+                    </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Model)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Ser_num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Inv_num)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManufacturerId)
+            </td>
+            <td class="row">
+                    <button><a asp-action="Edit" asp-route-id="@item.Id">Изменить</a></button> 
+                    <button><a asp-action="Details" asp-route-id="@item.Id">Подробности</a> </button>
+                    <button> <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a></button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+        <p>
+            <button>@Html.ActionLink("Добавить", "Create")</button>
+        </p>
+</div>
+</div>

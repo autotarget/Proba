@@ -1,0 +1,30 @@
+﻿@model Proba3.Models.Manufacturer
+
+
+@{
+    ViewData["Title"] = "Добавить";
+}
+<div class="row" id="mainsection">
+    <div id="sidebar" class="container"></div>
+    <div id="mainbar" class="container">
+<form id="add_item_form" class="siteform" asp-action="Create" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Добавить" class="btn btn-primary" />
+            </div>
+</form>
+        <div>
+            <button><a asp-action="Index">Назад</a></button>
+        </div>
+</div>
+</div>

@@ -1,0 +1,334 @@
+body {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+}
+
+footer {
+    height: 100px;
+    justify-content: center;
+}
+
+header, footer {
+    display: flex;
+    background-color: #54B4D3;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+}
+
+#brand {
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.mainmenu a {
+    display: inline-flex;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    vertical-align: middle;
+    width: 180px;
+    text-align: center;
+}
+
+    .mainmenu a:hover {
+        background-color: #f90;
+        font-size: 20px;
+    }
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainsection {
+    margin-top: 32px;
+}
+
+#sidebar {
+    display: flex;
+    width: 20%;
+    background-color: #54B4D3;
+    justify-content: center;
+}
+
+#mainbar {
+    width: 100%;
+    border-top: 2px solid #54B4D3;
+}
+
+#status {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-top: 2px solid #54B4D3;
+    border-bottom: 2px solid #54B4D3;
+}
+
+.row {
+    display: inline-flex;
+    width: 100%;
+}
+.container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;  
+}
+
+.siteform {
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    border: 2px solid #54B4D3;
+    margin: 10px;
+}
+
+    .siteform input, select, fieldset {
+        border: 1px solid #54B4D3;
+        border-radius: 5px;
+        height: 30px;
+        text-indent: 10px;
+        width: 100%;
+    }
+
+    .siteform textarea {
+        border: 1px solid #54B4D3;
+        border-radius: 5px;
+        width: 100%;
+        text-indent: 10px;
+    }
+
+    .siteform input:focus {
+        outline: 2px solid #54B4D3;
+    }
+
+#enter_form {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+}
+#main_nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.mainmenu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#reklama {
+    display: inline-flex;
+    position: relative;
+    top: 30px;
+    height: 200px;
+    width: 100%;
+}
+
+.side_img {
+    width: 20%;
+    opacity: 0.5;
+}
+
+img {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+#mybrand {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+}
+#enter {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+}
+#author {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    text-decoration: none;
+}
+#password {
+    margin-top: 10px;
+}
+.disabled {
+    color: grey;
+    pointer-events: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+#submenu1, #submenu2, #submenu3, #submenu5 {
+    display: none;
+    position: absolute;
+    top: 30px;
+    width: 180px;
+    z-index: 100;
+    background-color: #54B4D3;
+}
+
+.submenu a {
+    color: white;
+    font-weight: 200;
+    font-size: 14px;
+    width: 180px;
+}
+
+button a {
+    color: #54B4D3;
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+}
+button a:hover {
+    color:white;
+}
+#add_equip_form {
+    flex-direction: column;
+    width: 100%;
+}
+
+#find_equip_form {
+    display: none;
+}
+
+.table {
+    width:100%;
+    font-size: 14px;
+}
+
+#id {
+    width: 5%;
+}
+
+td {
+    width: 20%;
+    font-size: 14px;
+   
+}
+
+tr {
+    background-color: lightblue;
+    text-align: center;
+    border-bottom: 1px solid white;
+  
+}
+
+    tr:hover {
+        background-color: #f90;
+    }
+
+.active {
+    background-color: #f90;
+}
+
+button {
+    color: #54B4D3;
+    font-weight: bold;
+    border: 1px solid #54B4D3;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+}
+
+    button:hover {
+        color: white;
+        background-color: #54B4D3;
+        border: 2px solid white ;
+    }
+
+.operation {
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+#submit {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.submenu a:hover {
+    background-color: #f90;
+    font-size: 14px;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    padding: 0;
+    margin: 0;
+}
+
+    .slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    right: 20px;
+}

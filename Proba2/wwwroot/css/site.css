@@ -1,0 +1,84 @@
+#brand {
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 800;
+}
+.mainmenu a {
+    display: inline-flex;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    vertical-align: middle;
+    width: 180px;
+    text-align: center;
+}
+.mainmenu a:hover {
+        background-color: #f90;
+        font-size: 20px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainsection {
+    margin-top: 32px;
+}
+#sidebar {
+    display: flex;
+    width: 20%;
+    background-color: #54B4D3;
+    justify-content: center;
+}
+#mainbar {
+    width: 100%;
+    border-top: 2px solid #54B4D3;
+}
+#status {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-top: 2px solid #54B4D3;
+    border-bottom: 2px solid #54B4D3;
+}
+.row {
+    display: inline-flex;
+    width: 100%;
+}
+.siteform {
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+    border: 2px solid #54B4D3;
+    margin: 10px;
+}
+.siteform input, select, fieldset {
+        border: 1px solid #54B4D3;
+        border-radius: 5px;
+        height: 30px;
+        text-indent: 10px;
+        width: 100%;
+}
+.siteform textarea {
+        border: 1px solid #54B4D3;
+        border-radius: 5px;
+        width: 100%;
+        text-indent: 10px;
+}
+.siteform input:focus {
+        outline: 2px solid #54B4D3;
+}
+#enter_form {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+}

@@ -1,0 +1,66 @@
+﻿@model Proba3.Models.Equipment
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+    <div class="row" id="mainsection">
+        <div id="sidebar" class="container"></div>
+        <div id="mainbar" class="container">
+        <table class="table">
+            <thead>
+        <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Model)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Ser_num)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Inv_num)
+                </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ManufacturerId)
+                    </th>
+         </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => model.Id)
+                    </td>
+            <td>
+                @Html.DisplayFor(model => model.Title)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(model => model.Model)
+            </td>         
+            <td>
+                @Html.DisplayFor(model => model.Ser_num)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(model => model.Inv_num)
+            </td>
+                    <td>
+                        @Html.DisplayFor(model => model.ManufacturerId)
+                    </td>
+            </tr>
+            </tbody>
+            </table>
+    
+        <div class="row">
+            <button><a asp-action="Edit" asp-route-id="@Model?.Id">Изменить</a></button>
+            <button><a asp-action="Index">Назад</a></button>
+        </div>
+        </div>
+        </div>
+      
